@@ -1,11 +1,7 @@
-import './style.scss'
+import './style.scss';
 
 const Home = () => {
-  return (
-    <div>
-      <h1>Hello world!</h1>
-    </div>
-  );
+  return <h1>Test</h1>;
 };
 
 export { Home };
