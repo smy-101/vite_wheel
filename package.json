@@ -34,6 +34,8 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^28.1.1",
     "jest-environment-jsdom": "^28.1.1",
+    "jest-environment-jsdom-global": "^3.1.2",
+    "jest-location-mock": "1.0.9",
     "lint-staged": "^13.0.3",
     "prettier": "2.7.1",
     "sass": "^1.53.0",

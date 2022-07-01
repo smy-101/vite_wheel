@@ -20,6 +20,8 @@ specifiers:
   identity-obj-proxy: ^3.0.0
   jest: ^28.1.1
   jest-environment-jsdom: ^28.1.1
+  jest-environment-jsdom-global: ^3.1.2
+  jest-location-mock: 1.0.9
   lint-staged: ^13.0.3
   prettier: 2.7.1
   react: ^18.0.0
@@ -56,6 +58,8 @@ devDependencies:
   identity-obj-proxy: 3.0.0
   jest: 28.1.1_jbmz3vlfopghb5mdasddsdxfzq
   jest-environment-jsdom: 28.1.1
+  jest-environment-jsdom-global: 3.1.2_zxbrfn2fxbgg3whn7efsxqfvxu
+  jest-location-mock: 1.0.9
   lint-staged: 13.0.3
   prettier: 2.7.1
   sass: 1.53.0
@@ -509,6 +513,10 @@ packages:
   /@istanbuljs/schema/0.1.3:
     resolution: {integrity: sha512-ZXRY4jNvVgSVQ8DL3LTcakaAtXwTVUxE81hslsyD2AtoXW/wVob10HkOJ1X/pAlcI7D+2YoZKg5do8G/w6RYgA==}
     engines: {node: '>=8'}
+    dev: true
+
+  /@jedmao/location/3.0.0:
+    resolution: {integrity: sha512-p7mzNlgJbCioUYLUEKds3cQG4CHONVFJNYqMe6ocEtENCL/jYmMo1Q3ApwsMmU+L0ZkaDJEyv4HokaByLoPwlQ==}
     dev: true
 
   /@jest/console/28.1.1:
@@ -1738,6 +1746,11 @@ packages:
   /detect-newline/3.1.0:
     resolution: {integrity: sha512-TLz+x/vEXm/Y7P7wn1EJFNLxYpUD4TgMosxY6fAVJUnJMbupHBOncxyWUG9OpTaH9EBD7uFI5LfEgmMOc54DsA==}
     engines: {node: '>=8'}
+    dev: true
+
+  /diff-sequences/27.5.1:
+    resolution: {integrity: sha512-k1gCAXAsNgLwEL+Y8Wvl+M6oEFj5bgazfZULpS5CneoPPXRaCCW7dm+q21Ky2VEE5X+VeRDBVg1Pcvvsr4TtNQ==}
+    engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
     dev: true
 
   /diff-sequences/28.1.1:
@@ -2977,6 +2990,16 @@ packages:
       - supports-color
     dev: true
 
+  /jest-diff/27.5.1:
+    resolution: {integrity: sha512-m0NvkX55LDt9T4mctTEgnZk3fmEg3NRYutvMPWM/0iPnkFj2wIeF45O1718cMSOFO1vINkqmxqD8vE37uTEbqw==}
+    engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
+    dependencies:
+      chalk: 4.1.2
+      diff-sequences: 27.5.1
+      jest-get-type: 27.5.1
+      pretty-format: 27.5.1
+    dev: true
+
   /jest-diff/28.1.1:
     resolution: {integrity: sha512-/MUUxeR2fHbqHoMMiffe/Afm+U8U4olFRJ0hiVG2lZatPJcnGxx292ustVu7bULhjV65IYMxRdploAKLbcrsyg==}
     engines: {node: ^12.13.0 || ^14.15.0 || ^16.10.0 || >=17.0.0}
@@ -3003,6 +3026,15 @@ packages:
       jest-get-type: 28.0.2
       jest-util: 28.1.1
       pretty-format: 28.1.1
+    dev: true
+
+  /jest-environment-jsdom-global/3.1.2_zxbrfn2fxbgg3whn7efsxqfvxu:
+    resolution: {integrity: sha512-Suq/B0c8OVUYrx05j8ynKqKMzNCTNll72SLxzoTeBtjnsbrScM2Az0dBEBPN8EVTuP1lcgWN0tV0M9+hfkvXHQ==}
+    engines: {node: '>= 12'}
+    peerDependencies:
+      jest-environment-jsdom: 22.x || 23.x || 24.x || 25.x || 26.x || 27.x || 28.x
+    dependencies:
+      jest-environment-jsdom: 28.1.1
     dev: true
 
   /jest-environment-jsdom/28.1.1:
@@ -3036,6 +3068,11 @@ packages:
       jest-util: 28.1.1
     dev: true
 
+  /jest-get-type/27.5.1:
+    resolution: {integrity: sha512-2KY95ksYSaK7DMBWQn6dQz3kqAf3BB64y2udeG+hv4KfSOb9qwcYQstTJc1KCbsix+wLZWZYN8t7nwX3GOBLRw==}
+    engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
+    dev: true
+
   /jest-get-type/28.0.2:
     resolution: {integrity: sha512-ioj2w9/DxSYHfOm5lJKCdcAmPJzQXmbM/Url3rhlghrPvT3tt+7a/+oXc9azkKmLvoiXjtV83bEWqi+vs5nlPA==}
     engines: {node: ^12.13.0 || ^14.15.0 || ^16.10.0 || >=17.0.0}
@@ -3066,6 +3103,14 @@ packages:
     dependencies:
       jest-get-type: 28.0.2
       pretty-format: 28.1.1
+    dev: true
+
+  /jest-location-mock/1.0.9:
+    resolution: {integrity: sha512-DN/v7Zsa3N4uGgWTCrMrPPxhZORr/4N5gi+u7Tk6sLdORYplrC0//wfFN5FOtx4ZdQzDVfY6rLa4d+wfTKzQHw==}
+    engines: {node: '>=10.0.0'}
+    dependencies:
+      '@jedmao/location': 3.0.0
+      jest-diff: 27.5.1
     dev: true
 
   /jest-matcher-utils/28.1.1:
