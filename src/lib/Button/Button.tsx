@@ -1,20 +1,28 @@
+import { classes } from '@/utils/classes';
+
 interface ButtonProps {
   type?: 'default' | 'primary' | 'info' | 'warning' | 'danger';
   size: 'large' | 'default' | 'small';
   className?: string;
   disabled?: boolean;
   children?: React.ReactNode;
-  onClick?: () => void;
+  href?: string;
 }
 
 const Button: React.FC<ButtonProps> = (props) => {
-  const { type, onClick, ...rest } = props;
-  if (type === 'primary') {
-    console.log(1);
-  }
+  const {
+    type = 'default',
+    size = 'default',
+    className,
+    disabled = false,
+    children,
+    ...rest
+  } = props;
   return (
     <>
-      <button>Click me</button>
+      <button {...rest} className={classes(className)}>
+        {children}
+      </button>
     </>
   );
 };
