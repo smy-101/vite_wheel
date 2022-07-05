@@ -1,4 +1,4 @@
-import { classes } from '@/utils/classes';
+import { classes } from '../../utils/classes';
 
 interface ButtonProps {
   type?: 'default' | 'primary' | 'info' | 'warning' | 'danger';
