@@ -3,7 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
+    "main-dev": "pnpm --filter @vite_wheel/just-ui dev",
+    "hooks-dev": "pnpm --filter @vite_wheel/hooks dev",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "prepare": "husky install",
@@ -11,11 +12,11 @@
     "coverage": "vitest run --coverage"
   },
   "dependencies": {
-    "@types/node": "^18.0.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
   "devDependencies": {
+    "@types/node": "^18.0.3",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "@typescript-eslint/eslint-plugin": "^5.30.0",
