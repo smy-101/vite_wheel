@@ -1,0 +1,16 @@
+@import '../../helper/helper.scss';
+
+.jui-button {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  line-height: 22px;
+  padding: 4px 15px;
+  border: 1px solid;
+  color: $main;
+  border-color: rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+}

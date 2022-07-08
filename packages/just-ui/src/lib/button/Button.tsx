@@ -1,4 +1,4 @@
-import { classes } from '@/utils/classes';
+import { classes } from '@/helper/classes';
 
 type ButtonProps = {
   type?: 'default' | 'dashed' | 'primary' | 'danger';
@@ -30,7 +30,11 @@ const Button: React.FC<ButtonProps> = (props) => {
     ...rest
   } = props;
 
-  const buttonClassName = classes('just-ui', [size, type, className], { disabled, ghost, loading });
+  const buttonClassName = classes('jui-button', [size, type, className], {
+    disabled,
+    ghost,
+    loading
+  });
 
   return (
     <>
@@ -40,3 +44,5 @@ const Button: React.FC<ButtonProps> = (props) => {
     </>
   );
 };
+
+export { Button };
