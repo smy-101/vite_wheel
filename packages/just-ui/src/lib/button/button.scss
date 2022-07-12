@@ -10,7 +10,157 @@
   border: 1px solid;
   color: $main;
   border-color: rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
+  border-radius: 2px;
   background-color: #fff;
   cursor: pointer;
+  & + & {
+    margin-left: 8px;
+  }
+  &:hover,
+  &:focus {
+    color: $blue;
+    border-color: $blue;
+  }
+  &:focus {
+    outline: none;
+  }
+  &::-moz-focus-inner {
+    border: 0;
+  }
+  > .jui-button-inner {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  &.large {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 6px 15px;
+  }
+  &.small {
+    font-size: 12px;
+    line-height: 20px;
+    padding: 2px 10px;
+  }
+  &.jui-theme-link {
+    border-color: transparent;
+    box-shadow: none;
+    color: $blue;
+    &:hover,
+    &:focus {
+      color: lighten($blue, 10%);
+    }
+    &.primary {
+      color: $blue;
+      &:hover,
+      &:focus {
+        color: darken($blue, 10%);
+      }
+    }
+    &.danger {
+      color: $error;
+      &:hover,
+      &:focus {
+        color: darken($error, 10%);
+      }
+    }
+    &.disabled {
+      cursor: not-allowed;
+      color: #d9d9d9;
+      &:hover,
+      &:focus {
+        color: #d9d9d9;
+      }
+    }
+  }
+  &.jui-theme-text {
+    border-color: transparent;
+    box-shadow: none;
+    color: inherit;
+    &:hover,
+    &:focus {
+      background: darken(white, 5%);
+    }
+    &.primary {
+      color: $blue;
+      &:hover,
+      &:focus {
+        color: darken($blue, 10%);
+      }
+    }
+    &.danger {
+      color: $error;
+      &:hover,
+      &:focus {
+        color: darken($error, 10%);
+      }
+    }
+    &.disabled {
+      cursor: not-allowed;
+      color: #d9d9d9;
+      &:hover,
+      &:focus {
+        color: #d9d9d9;
+      }
+    }
+  }
+  &.jui-theme-button {
+    &.primary {
+      background: $blue;
+      color: white;
+      border-color: $blue;
+      &:hover,
+      &:focus {
+        background: darken($blue, 10%);
+        border-color: darken($blue, 10%);
+      }
+    }
+    &.danger {
+      background: $error;
+      border-color: $error;
+      color: white;
+      &:hover,
+      &:focus {
+        background: darken($error, 10%);
+        border-color: darken($error, 10%);
+      }
+    }
+    &.disabled {
+      cursor: not-allowed;
+      color: rgba(0, 0, 0, 0.25);
+      border-color: #d9d9d9;
+      background: #e6e6e6;
+      &:hover,
+      &:focus {
+        background-color: #e6e6e6;
+        color: rgba(0, 0, 0, 0.25);
+        border-color: #d9d9d9;
+      }
+    }
+  }
+  > .jui-loadingIndicator {
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    margin-right: 4px;
+    border-radius: 8px;
+    border-color: $blue $blue $blue transparent;
+    border-style: solid;
+    border-width: 2px;
+    animation: button-loading-spin 1s linear infinite;
+    &.primary {
+      border-color: white white white transparent;
+    }
+    &.danger {
+      border-color: white white white transparent;
+    }
+  }
+}
+
+@keyframes button-loading-spin {
+  0% {
+    transform: rotateZ(0);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
 }
